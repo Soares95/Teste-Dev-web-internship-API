@@ -5,6 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from typing import List, Optional
 
+
 app = FastAPI()
 
 DATABASE_URL = "postgresql+psycopg2://usuario:senha@localhost/empresa_db"
@@ -170,3 +171,4 @@ def delete_obrigacao(obrigacao_id: int):
     db.commit()
     db.close()
     return {"detail": "Obrigação acessória deletada com sucesso"}
+
